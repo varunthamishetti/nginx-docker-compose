@@ -1,0 +1,7 @@
+      Name                  Command            State             Ports
+--------------------------------------------------------------------------------
+varun_database_1   docker-entrypoint.sh        Up      3306/tcp, 33060/tcp
+                   mysqld
+varun_web_1        /docker-entrypoint.sh       Up      0.0.0.0:90->80/tcp,:::90-
+                   ngin ...                            >80/tcp, 8080/tcp
+

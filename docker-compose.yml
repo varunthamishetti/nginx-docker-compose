@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  web:
+    image: varunthamishetti123/mynginximage:1
+    depends_on:
+    - database
+    ports:
+    - 90:80
+    networks:
+    - mysqlnetwork
+  database:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    networks:
+    - mysqlnetwork
+    volumes:
+    - mongovolume
+networks:
+  mysqlnetwork:
+    driver:
+      bridge
+volumes:
+  mongovolume:
+
