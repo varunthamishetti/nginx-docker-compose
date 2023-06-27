@@ -2,17 +2,13 @@
 
 while read line
 do
-   if echo "$line" | grep -q -e "varun-assessment-3_database_1" -e "varun-assessment-3_web_1"; 
-   then
-      
+   if echo "$line" | grep -q -e "varun-assessment-3_database_1" -e "varun-assessment-3_web_1"; then
     # Extract the container name, status, and ports
-      container_name=$(echo "$line" | awk '{print $1}')
-       status=$(echo "$line" | awk '{print $3}')
+    container_name=$(echo "$line" | awk '{print $1}')
+    status=$(echo "$line" | awk '{print $4}')
      # Print the container details
-       echo "Container Name: $container_name"
-       echo "Status: $status"
-   else
-      echo "Containers are down"
-   fi
-done < /jenkins_home/workspace/Varun-Assessment-3/output.txt
-
+    echo "Container Name: $container_name"
+    echo "Status: $status"
+    echo
+  fi
+done < output.txt
