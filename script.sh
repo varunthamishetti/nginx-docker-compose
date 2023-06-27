@@ -14,5 +14,5 @@ do
    else
       echo "Containers are down"
    fi
-done < output.txt
+done < /jenkins_home/workspace/Varun-Assessment-3/output.txt
 
