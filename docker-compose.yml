@@ -5,7 +5,7 @@ services:
     depends_on:
     - database
     ports:
-    - 95:80
+    - 98:80
     networks:
     - mysqlnetwork
   database:
